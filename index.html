@@ -3,11 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <title>:(</title>
+    <style>
+      body {
+        background: black;
+      }
+      #text {
+        color: white;
+        font-weight: bold;
+        font-family: "Courier New", Courier, monospace;
+      }
+      #text2 {
+        color: white;
+        font-family: Courier, monospace;
+        font-weight: bold;
+      }
+    </style>
   </head>
-  <body style="background: black;">
-    <h1 id="text" style="font-family: Courier, monospace; color: white;"></h1>
-
-
+  <body>
+    <h1 id="text"></h1>
+    <p id="text2"">(since original release date)</p>
     <script>
       function updateText() {
             const startDate = new Date('2024-10-01');
