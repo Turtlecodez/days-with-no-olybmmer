@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>:(</title>
+  </head>
+  <body style="background: black;">
+    <h1 id="text" style="font-family: Courier, monospace; color: white;"></h1>
+
+
+    <script>
+      function updateText() {
+            const startDate = new Date('2024-10-01');
+            const currentDate = new Date();
+            const timeDiff = currentDate - startDate;
+            const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            document.getElementById('text').innerText = `${daysDiff} days with no olybmmer`;
+        }
+        window.onload = updateText;
+    </script>
+  </body>
+</html>
