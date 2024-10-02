@@ -19,16 +19,21 @@
   </head>
   <body>
     <h1 id="text"></h1>
-    <p id="text2"">(since supposed release date, 10/1/24)</p>
+    <p id="text2">(since supposed release date, 10/1/24)</p>
     <script>
       function updateText() {
-            const startDate = new Date('2024-10-01');
-            const currentDate = new Date();
-            const timeDiff = currentDate - startDate;
-            const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-            document.getElementById('text').innerText = `${daysDiff} days with no olybmmer`;
-        }
-        window.onload = updateText;
+        const startDate = new Date('2024-10-01T00:00:00');
+        const currentDate = new Date();
+        const timeDiff = currentDate - startDate;
+
+        const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        const hoursDiff = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutesDiff = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const secondsDiff = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+        document.getElementById('text').innerText = `${daysDiff} days, ${hoursDiff} hours, ${minutesDiff} minutes, and ${secondsDiff} seconds since olybmmer was supposed to release`;
+      }
+      window.onload = updateText;
     </script>
   </body>
 </html>
