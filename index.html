@@ -34,6 +34,7 @@
         document.getElementById('text').innerText = `${daysDiff} days, ${hoursDiff} hours, ${minutesDiff} minutes, and ${secondsDiff} seconds since olybmmer was supposed to release`;
       }
       window.onload = updateText;
+      setInterval(updateText, 100)
     </script>
   </body>
 </html>
